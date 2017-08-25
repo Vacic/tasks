@@ -1,0 +1,20 @@
+a.btn>span.glyphicon {
+	margin-top: 4px;
+}
+div.date-space {
+	width:92px;
+}
+th {
+	text-align: center;
+}
+li.project_display {
+	height: 37px;
+	line-height: 39px;
+}
+li.project_display:hover {
+	background-color: #f5f5f5;
+}
+li.project_display>a.btn {
+	margin-left: 12px;
+	margin-top: 3px;
+}

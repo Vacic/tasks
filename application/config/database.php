@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'errand_db',
+	'hostname' => 'johnny.heliohost.org',
+	'username' => 'vacic_vacic',
+	'password' => '82469173',
+	'database' => 'vacic_tasks',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

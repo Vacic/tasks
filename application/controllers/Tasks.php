@@ -42,6 +42,7 @@
 				} else {
 					$data = array(
 							'task_project_id' => $project_id,
+							'task_user_id' => $this->session->userdata('user_id'),
 							'task_name' => $this->input->post('task_name'),
 							'task_body' => $this->input->post('task_body'),
 							'due_date' => $this->input->post('due_date')

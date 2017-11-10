@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'https://tasks-app-2.herokuapp.com/';
+//$config['base_url'] = 'http://localhost/ci/';
 
 /*
 |--------------------------------------------------------------------------

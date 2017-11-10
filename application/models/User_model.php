@@ -1,24 +1,19 @@
 <?php 
 	class User_model extends CI_Model {
-		public function get_users($user_id){
-			// $this->db->where('id', $user_id);
-			$this->db->where(['id => $user_id']);
+		public function get_user($user_id){
+			$this->db->where(['id' => $user_id]);
 			$query = $this->db->get('users');
-			return $query->result();
-			// $query = $this->db->query("SELECT * FROM users");
-			// return $query->num_rows(); gives the row count
-			// return $query->num_fields(); gives the column count
-		/*	$config['hostname'] = 'localhost';
-			$config['username'] = 'root';
-			$config['password'] = 'root';
-			$config['database'] = 'errand_db';
-
-			$connection = $this->load->database($config);*/
+			return $query->row();
 		}
-		public function create_users($data) {
+		public function get_user_img($user_id){
+			$this->db->where(['id' => $user_id]);
+			$query = $this->db->get('users');
+			return $query->row(6)->img;
+		}
+		public function create_user($data) {
 			$this->db->insert('users', $data);
 		}
-		public function update_users($data, $id) {
+		public function update_user($data, $id) {
 			$this->db->where(['id' => $id]);
 			$this->db->update('users', $data);
 		}

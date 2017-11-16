@@ -13,7 +13,6 @@
         thumbnailHeight: null,
 		thumbnailWidth: null,
 		init: function() {
-			var _this = this;
 			this.on('success', function(){
 				setTimeout(function(){
 					$('#modal').modal('hide');
@@ -27,7 +26,6 @@
 							$(".profile-img").attr('src', '<?php echo base_url();?>userimg/'+data);
 							$(".message").html('<p class="bg-success text-center">Your image has been changed successfully</p>');
 							$('.message').toggle();
-							_this.removeFile();
 							setTimeout(function(){
 								$('.message').slideUp();
 							}, 5000);

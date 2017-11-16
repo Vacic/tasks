@@ -24,7 +24,7 @@
 					type: 'POST',
 					success: function(data){
 						if(!data.error) {
-							$(".profile-img").attr('src', '../../userimg/'+data);
+							$(".profile-img").attr('src', '<?php echo base_url();?>userimg/'+data);
 							$(".message").html('<p class="bg-success text-center">Your image has been changed successfully</p>');
 							$('.message').toggle();
 							_this.removeFile();

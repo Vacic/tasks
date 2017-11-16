@@ -1,7 +1,6 @@
 <h2>Register</h2>
 <?php $attributes = array('id' => 'register_form', 'class' => 'form-horizontal'); ?>
-<?php echo validation_errors("<p class='bg-danger'>"); ?>
-<?php echo form_open('users/register', $attributes); ?>
+<?php echo form_open('users/reg', $attributes); ?>
 <div class="form-group">
 	<?php echo form_label('First Name'); ?>
 	<?php $data = array('class' => 'form-control',
@@ -25,7 +24,7 @@
 	<?php $data = array('class' => 'form-control',
 						'name' => 'email',
 						'placeholder' => 'Email',
-						'value' => set_value('email'));
+						'value' => set_value('$user->email'));
 	?>
 	<?php echo form_input($data); ?>
 </div>

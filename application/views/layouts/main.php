@@ -5,8 +5,9 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/dropzone.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/my.css">
-		<script src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/my.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/dropzone.js"></script>
@@ -48,6 +49,7 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 		<div class="container">
+			<div class="message"><?=$this->session->flashdata('msg')?></div>
 			<?php if (!$this->session->userdata('logged_in')): ?>
 				<div class="col-xs-3">
 					<?php $this->load->view('users/login_view'); ?>

@@ -20,14 +20,62 @@ li.project_display>a.btn {
 }
 .profile-img {
 	max-width: 350px;
-	padding-bottom: 15px;
 	margin-left: auto;
     margin-right: auto;
+}
+.profile-form {
+	padding-top: 15px;
+}
+.profile-img:hover {
+	cursor: pointer;
+}
+.profile-name-link {
+	text-decoration: none;
+	color: #333;
+}
+.profile-name-link:hover {
+	text-decoration: none;
+	color: #333;
 }
 .profile-name {
 	font-size: 30px;
 	text-align: center;
 	font-weight: bold;
+	display: inline;
+	padding-left: 7px;
+}
+#profile-name {
+	text-align: center;
+	display: table;
+	max-width: 729px;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 1px 10px 0px 10px;
+	margin-bottom: 10px;
+	border: 2px solid white;
+}
+#profile-name:hover {
+	border: 2px solid rgb(142, 142, 142);
+    border-radius: 20px;
+}
+.divider {
+	border-right: 2px solid rgb(142, 142, 142);
+	padding: 21px 0px 10px 6px;
+	display: none;
+}
+.profile-name-form {
+	display: none;
+}
+.profile-name-input {
+	width: 30%;
+	display: inline-block;
+}
+.profile-name-submit {
+	display: inline-block;
+}
+.profile-name-label {
+	width: 100%;
+	text-align: left;
 }
 .drop-zone {
 	height: 92%;
@@ -63,4 +111,12 @@ div.modal-content>form.drop-zone>div.dz-preview>div.dz-image, div.modal-content>
 }
 div.modal-content>form.drop-zone>div.dz-preview.dz-error{
 	display: none;
+}
+.fa-pencil-square-o {
+	display:none;
+}
+p {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 25px
 }

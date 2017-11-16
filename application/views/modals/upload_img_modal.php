@@ -13,17 +13,24 @@
         thumbnailHeight: null,
 		thumbnailWidth: null,
 		init: function() {
+			var _this = this;
 			this.on('success', function(){
 				setTimeout(function(){
 					$('#modal').modal('hide');
 				}, 3000);
-				var user_id = $('.upload-img').attr('user-id');
+				var user_id = $('.profile-img').attr('user-id');
 				$.ajax({
 					url: '<?php echo base_url();?>users/get_img/'+user_id,
 					type: 'POST',
 					success: function(data){
 						if(!data.error) {
 							$(".profile-img").attr('src', '../../userimg/'+data);
+							$(".message").html('<p class="bg-success text-center">Your image has been changed successfully</p>');
+							$('.message').toggle();
+							_this.removeFile();
+							setTimeout(function(){
+								$('.message').slideUp();
+							}, 5000);
 						}
 					}
 				});

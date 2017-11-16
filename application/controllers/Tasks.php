@@ -4,7 +4,7 @@
 			parent::__construct();
 			if(!$this->session->userdata('logged_in')) {
 				$this->session->set_flashdata('no_access', 'Sorry you are not allowed or not logged in');
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function project_tasks($project_id) {
@@ -14,7 +14,7 @@
 				$this->load->view('layouts/main', $data);
 			} else {
 				$this->session->set_flashdata("missing_variable", "<h1><p class='bg-danger text-center'>You haven't selected any project's tasks.</p></h1>");
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function index() {
@@ -29,7 +29,7 @@
 				$this->load->view('layouts/main', $data);
 			} else {
 				$this->session->set_flashdata("missing_variable", "<h1><p class='bg-danger text-center'>You haven't selected any task.</p></h1>");
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function create($project_id) {
@@ -54,7 +54,7 @@
 				}
 			} else {
 				$this->session->set_flashdata("missing_variable", "<h1><p class='bg-danger text-center'>A problem has occured.<br>Please try again.</p></h1>");
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function edit($task_id) {
@@ -79,7 +79,7 @@
 				}
 			} else {
 				$this->session->set_flashdata("missing_variable", "<h1><p class='bg-danger text-center'>You haven't selected any task to edit.</p></h1>");
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function delete($task_id) {
@@ -90,7 +90,7 @@
 				redirect('tasks/project_tasks/'.$task_project_id);
 			} else {
 				$this->session->set_flashdata("missing_variable", "<h1><p class='bg-danger text-center'>You haven't selected any task to delete.</p></h1>");
-				redirect('home');
+				redirect('');
 			}
 		}
 		public function mark_complete($task_id) {

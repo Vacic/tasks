@@ -98,7 +98,10 @@
 				$config['upload_path'] = './userimg/';
 				$this->upload->initialize($config);
 				if(!$this->upload->do_upload('file')) {
-					$this->session->set_flashdata('msg', '<p class="bg-danger text-center">There was a problem uploading your image</p>');//$this->upload->display_errors()
+					$data = array(
+					'msg' => validation_errors('<p class="bg-danger text-center">', '</p>')
+					); 
+					$this->session->set_flashdata($data);
 					$data['main_view'] = 'users/profile_view';
 					$this->load->view('layouts/main', $data);
 				} else {
